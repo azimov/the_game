@@ -26,3 +26,8 @@ screen(bomb, [
         "Nuclear war has ravaged the earth for nearly three decades",
         "You are one of the few million surviros left",
         "Nobody knows how the first bomb was dropped."])
+click.pause()
+screen(bomb,
+       ["The machines have lost.", "We are near there final base",
+        "However, we have reason to believe that they are plotting something big"]
+)
