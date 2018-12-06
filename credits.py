@@ -1,6 +1,8 @@
 import click
 import time
 
+SPEED = 0.4
+
 click.echo(
     """
         GSM the game is an SBRC production.
@@ -13,7 +15,7 @@ for i in range(100):
 with open("credits.txt") as credits:
     for line in credits:
         click.echo(line)
-        time.sleep(0.6)
+        time.sleep(SPEED)
 
 
 click.pause()
