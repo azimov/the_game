@@ -1,0 +1,91 @@
+Made for Dr. Rupert Norman
+
+
+        Code by James Gilbert, Nicole Pearcy and Vanisha Patel
+
+        Story by James Gilbert, Nicole Pearcy and Vanisha Patel
+
+
+
+
+        We accept no responsibility for the opinions expressed in this game, even if they are our own.
+
+        We also accept no responsibility for the following credit sequence...
+
+
+
+
+
+
+
+************************************************************************************************************************
+From Noah Mesfin @ Oxford Brookes:
+
+                            Rupert the GOAT of WALES!
+
+                            1,2,3... GOAT
+
+                            Hip-hop-hurray for Dr. Rupes!
+
+                            rupes.__init__()
+                            rupes.winning(True)
+
+
+************************************************************************************************************************
+
+
+
+
+
+                    (A Note from Jamie - It's bad practice to call a python objects __init__ constructor directly
+                    please don't do this....)
+
+
+
+
+
+
+
+
+
+
+
+                   No genome scale models were harmed in the production of this game
+
+
+
+
+
+
+                    Rupert Norman Will return....
+
+
+                    In
+
+                    ...
+
+
+
+
+
+
+
+                    The Post Doc
+
+
+
+
+
+            ..........   @@@@@    @@@@@             ...........
+            .........   @     @  @     @            ..........
+            ........       @@@   @     @             ........
+            .......      @@      @     @             ........
+            ......      @@@@@@@   @@@@@  th          .......
+            .....     -----------------------        .....
+            ....        C  E  N  T  U  R  Y          ....
+            ...       -----------------------        ...
+            ..        @@@@@ @@@@@ @   @ @@@@@        ..
+            ==          @   @      @ @    @          ==
+          __||__        @   @@@@    @     @        __||__
+         |      |       @   @      @ @    @       |      |
+_________|______|_____  @   @@@@@ @   @   @  _____|______|_________
