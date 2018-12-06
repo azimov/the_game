@@ -21,3 +21,8 @@ if not conf:
 
 screen(office,[])
 processing("Loading...")
+
+screen(bomb, [
+        "Nuclear war has ravaged the earth for nearly three decades",
+        "You are one of the few million surviros left",
+        "Nobody knows how the first bomb was dropped."])
