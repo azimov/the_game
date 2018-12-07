@@ -10,20 +10,22 @@
 
 
 
-        Code by James Gilbert, Nicole Pearcy and Vanisha Patel
+        Code by James Gilbert, Thomas Millat, Nicole Pearcy and Vanisha Patel
 
 
 
 
 
-        Story by James Gilbert, Nicole Pearcy and Vanisha Patel
+        Story by James Gilbert, Thomas Millat, Nicole Pearcy and Vanisha Patel
 
+
+        Support by Mohit Dalwadi
 
 
 
         We accept no responsibility for the opinions expressed in this game, even if they are our own.
 
-        We also accept no responsibility for the following credit sequence...
+        We also accept no responsibility for the following credit sequence written by your so called "friends"...
 
 
 
@@ -78,6 +80,12 @@ Matt Abbott:
 
 ************************************************************************************************************************
 
+Bashir:
+
+                        Wish you the best of luck with the viva.
+
+
+
 ************************************************************************************************************************
 
                    No genome scale models were harmed in the production of this game
@@ -118,3 +126,7 @@ Matt Abbott:
 _________|______|_____  @   @@@@@ @   @   @  _____|______|_________
 
 
+
+       This work was supported by the UK Biotechnology and Biological Sciences Research Council (BBSRC)
+       and Engineering and Physical Sciences Research Council (EPSRC) grants
+       BB/L013940/1,  BB/K00283X/1 and BB/L502030/1

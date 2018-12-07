@@ -35,9 +35,6 @@ dirs = ["""
         A tale of love, loss, betrayal and ...
 """,
 """
-                    ...
-""",
-"""
                      GROWTH.
 """
 ]
@@ -64,7 +61,7 @@ name = click.prompt("Please enter your name")
 click.clear()
 
 click.secho("Hello {}, welcome to genome scale modelling the game. A game about genome scale modelling. \n".format(name) +
-            "My name is COMPUTER 43 I am the benevolent AI sent to help you learn.")
+            "My name is JOSHUA I am the FRIENDLY AI sent to help you LEARN.")
 
 time.sleep(3)
 
@@ -73,7 +70,9 @@ mood = click.prompt("How are you feeling today?")
 processing()
 
 click.clear()
-click.echo()
+click.pause()
+
+click.clear()
 click.secho("Sorry for the delay. Unfortunatley, due to budget cuts EMPATHY was not included in my programming. ")
 click.secho("My programmers sincerely hopes that {} is not one of the bad emotions".format(mood))
 
@@ -137,6 +136,29 @@ click.clear()
 click.secho(office)
 click.echo("You are now about to enter the ScrumPy metabolic simulation simulator...")
 click.pause()
+click.clear()
+
+
+protein = """
+MSILNVKNVNHGFGDRAIFEDVSFRLLKGEHVGLVGANGEGKSTFMSIITGKLMPDEGTIEWSNNVRVGYMDQHASLQKG
+KTIKDVLKDAFKYLFDMEANMMEITDKMAEASEDELQKLLDEMGTIQDTLDNNDFYVIDVKIEEVAKGLGITDIGLDKDV
+ADLSGGQRTKVLLAKLLLQKPDILLLDEPTNYLDEVHIEWLKRYLNDFENAFILISHDIPFLNSVINVIYHIDNRKLTRY
+AGDYDNFMRVYEANKKQVEAAYERQQQEIAKLKDFVARNKARVATTGMARARQKQLDKMDIIEKTQEKPKPEFNFKTART
+SGKLIFETKDLVVGYDSPLSKPLNLTMERGQKIALVGANGLGKTTLLKSLLGKIKPISGDVELGDYQYIGYFEQEIKEAN
+DKTCIEEVWEEFPAYTQYEVRAALAKCGLTTKHIESKVMVLSGGEQAKVRLCKLINNETNILILDEPTNHLDVDAKDELK
+RALKEYRGSILLVCHEPEFYKDVVTDVWNCEEWTTKIY
+"""
+
+click.echo("In a moment you will be shown a protein sequence. That you have to identify.")
+time.sleep(2)
+click.clear()
+click.echo(protein)
+time.sleep(2)
+click.clear()
+gene_name = click.prompt("What is the name of this gene?")
+
+click.echo("")
 
 import nicole
 import vanisha
+import credits
