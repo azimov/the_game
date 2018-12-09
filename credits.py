@@ -1,8 +1,14 @@
 import click
 import time
+from pygame import mixer
+import os
+
+if os.path.exists("baby.mp3"):
+    mixer.init()
+    mixer.music.load("baby.mp3")
+    mixer.music.play()
 
 SPEED = 0.4
-
 
 click.echo("""
 

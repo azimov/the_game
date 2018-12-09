@@ -172,7 +172,7 @@ The level of carbon monoxide in the system is too high and we're scared she's go
 Unfortunately our last modeller died trying to save us. 
 She was working on a really important problem.
 
-What is the expected growth rate of C aceto when growing on glucose?
+What is the expected growth rate of C aceto when growing on Fructose?
 
 Yours scincerely,
 Sean Sampson
@@ -205,6 +205,7 @@ while response not in ["A", "a"]:
 
     wt = 0.0
 
+click.clear()
 click.secho(office)
 click.echo("You are now about to enter the ScrumPy metabolic simulation simulator...")
 click.secho("If you thought things were nerdy before...", blink=True)
@@ -266,6 +267,8 @@ click.echo("""
 >> Infeasible
 """)
 
+click.pause()
+
 response = None
 wt = 2.0
 blag = True
@@ -289,7 +292,7 @@ while response not in ["A", "a"]:
     elif response in ["C", "c"]:
         coffee_counter.add_count(office)
 
-    elif response in ["D", "d"] and coffee_counter < 3:
+    elif response in ["D", "d"] and coffee_counter.count < 3:
         screen(office, [
             "You struggle to summon the motivation to work again",
             "Maybe coffee would help"
@@ -310,7 +313,7 @@ while response not in ["A", "a"]:
 
     wt = 0.0
 
-screen(office, ["You decide to send that email"])
+screen(office, ["You decide to send that email", "Looks like you've got a response right away"])
 
 if blag:
     pass
