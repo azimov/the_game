@@ -1,6 +1,6 @@
 import click
 import time
-from utils import processing, check_twitter, office, screen, coffee_counter
+from utils import processing, check_twitter, office, screen, coffee_counter, scrumpy_bg, scrumpy_echo
 
 title_text = """ 
               _____  ________  ___                
@@ -82,7 +82,7 @@ answer = click.prompt("Are you prepared to accept everything that this entails?"
 
 while answer not in ["Yes", "yes", "y", "Y", "YES"]:
     click.clear()
-    answer = click.prompt("Are you prepared to accept everything that this?")
+    answer = click.prompt("Are you prepared to accept everything that this entails?")
 
 click.secho("Excellent. This constitutes your informed consent.")
 click.pause()
@@ -207,9 +207,126 @@ while response not in ["A", "a"]:
 
 click.secho(office)
 click.echo("You are now about to enter the ScrumPy metabolic simulation simulator...")
-click.secho("You thought things were nerdy before...", blink=True)
+click.secho("If you thought things were nerdy before...", blink=True)
 click.pause()
 click.clear()
+
+
+# Get exact growth rate of C auto on glucose
+response = None
+wt = 2.0
+while response not in ["A", "a"]:
+    bg = scrumpy_bg.format(" ")
+    screen(bg, [
+        "You are in the  scrumpy simulator",
+        "What do you do?",
+        "A: Load model",
+        "B: Check twitter",
+        "C: Get a coffee"
+    ], wait_time=wt)
+
+    response = click.prompt("Select an action")
+
+    if response in ["B", "b"]:
+        check_twitter(bg)
+        click.pause()
+
+    elif response in ["C", "c"]:
+        coffee_counter.add_count(bg)
+
+    wt = 0.0
+
+click.clear()
+scrumpy_echo("load_model()")
+
+response = None
+wt = 2.0
+while response not in ["A", "a"]:
+    bg = scrumpy_bg.format("load_model()")
+    screen(bg, [
+        "You are in the  scrumpy simulator",
+        "What do you do next?",
+        "A: Set growth media and calculate growth rate",
+        "B: Check twitter",
+        "C: Get a coffee"
+    ], wait_time=wt)
+
+    response = click.prompt("Select an action")
+
+    if response in ["B", "b"]:
+        check_twitter(bg)
+        click.pause()
+
+    elif response in ["C", "c"]:
+        coffee_counter.add_count(bg)
+
+    wt = 0.0
+
+click.echo("""
+>> Infeasible
+""")
+
+response = None
+wt = 2.0
+blag = True
+while response not in ["A", "a"]:
+
+    screen(office, [
+        "Looks like scrumpy is broken but you need an answer fast",
+        "What do you do?",
+        "A: Blag an answer",
+        "B: Check twitter",
+        "C: Get a coffee",
+        "D: Try and get it working"
+    ], wait_time=wt)
+
+    response = click.prompt("Select an action")
+
+    if response in ["B", "b"]:
+        check_twitter(office)
+        click.pause()
+
+    elif response in ["C", "c"]:
+        coffee_counter.add_count(office)
+
+    elif response in ["D", "d"] and coffee_counter < 3:
+        screen(office, [
+            "You struggle to summon the motivation to work again",
+            "Maybe coffee would help"
+            ]
+        )
+
+        click.pause()
+    elif response in ["D", "d"] and coffee_counter.count >= 3:
+        screen(office, [
+            "Again you load up the simulator",
+            "You realise that your scrumpy spy file is broken",
+            "Fixing this you get the answer"
+            ]
+        )
+        scrumpy_echo("m.Solve()")
+        click.echo("0.03")
+        blag = False
+
+    wt = 0.0
+
+screen(office, ["You decide to send that email"])
+
+if blag:
+    pass
+else:
+    pass
+
+
+# Error in code
+
+# Fix bug, run again
+
+# Send email - response
+# "You saved the field of production of small quantities of solvents made from waste gasses in china"
+# "good job"
+
+# Kobashi mayru
 
 
 protein = """
@@ -233,13 +350,13 @@ time.sleep(3)
 click.clear()
 gene_name = click.prompt("Name the gene")
 
-screen(office)
+screen(office, [])
 processing("Checking gene name...")
-screen(office)
+screen(office, [])
 processing("Loading NCBI blast...")
-screen(office)
+screen(office, [])
 processing("Querying server...")
-screen(office)
+screen(office, [])
 processing("Validating response...")
 
 time.sleep(3)

@@ -6,8 +6,10 @@
                       Made for Dr. Rupert Norman
 
 
+               All source code is open source or whatever.
 
 
+                    Probably best not to look at it...
 
 
         Code by James Gilbert, Thomas Millat, Nicole Pearcy and Vanisha Patel
@@ -36,14 +38,20 @@ From Noah Mesfin @ Oxford Brookes:
 ************************************************************************************************************************
 
 
-                            Rupert the GOAT of WALES!
+                    Rupert the GOAT of WALES!
 
-                            1,2,3... GOAT
+                    1,2,3... GOAT
 
-                            Hip-hop-hurray for Dr. Rupes!
 
-                            rupes.__init__()
-                            rupes.winning(True)
+
+
+                    Hip-hop-hurray for Dr. Rupes!
+
+
+
+
+                    rupes.__init__()
+                    rupes.winning(True)
 
 
 ************************************************************************************************************************
@@ -92,7 +100,7 @@ Bashir:
 
 
 
-                    Rupert Norman Will return....
+                    Rupert Norman will return....
 
 
                     In

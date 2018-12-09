@@ -2,6 +2,7 @@ import click
 import time
 from tqdm import tqdm
 import random
+import sys
 
 
 def processing(text="Processing..."):
@@ -73,9 +74,10 @@ def check_twitter(screen=None):
     click.echo(tweets[choice])
 
 
-def screen(background, text, wait_time=2.0):
+def screen(background, text, wait_time=2.0, clear=True):
 
-    click.clear()
+    if clear:
+        click.clear()
     click.echo(background)
     for t in text:
         click.echo(t)
@@ -113,10 +115,33 @@ bomb = """
  _____.,-#%&$@%#&#~,._____
 """
 
+scrumpy_bg = """
+>> {}
+
+
+
+
+
+
+
+
+
+"""
+
+
+def scrumpy_echo(command):
+    print("\n>> ", end="")
+    for char in command:
+        wait = random.uniform(0, 0.5)
+        print(char, end="")
+        sys.stdout.flush()
+        time.sleep(wait)
+    screen(scrumpy_bg.format(command), [], 0)
+
 
 class CoffeCounter(object):
 
-    def __init__(self, limit=3):
+    def __init__(self, limit=10):
         self.count = 0
         self.limit = limit
 

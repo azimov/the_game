@@ -4,10 +4,10 @@ response = None
 wt = 2.0
 while response not in ["A", "a"]:
 
-    screen(office, [
-        "Wow. Looks like you can't ignore this issue.",
+    screen(scrumpy_bg.format(" "), [
+        "You are in the  scrumpy simulator",
         "What do you do?",
-        "A: Enter scrumpy to find the solution",
+        "A: Load model",
         "B: Check twitter",
         "C: Get a coffee"
     ], wait_time=wt)
@@ -15,13 +15,15 @@ while response not in ["A", "a"]:
     response = click.prompt("Select an action")
 
     if response in ["B", "b"]:
-        check_twitter(office)
+        check_twitter(scrumpy_bg.format(" "))
         click.pause()
 
     elif response in ["C", "c"]:
-        coffee_counter.add_count(office)
+        coffee_counter.add_count(scrumpy_bg.format(" "))
 
     wt = 0.0
+
+scrumpy_echo("load_model()")
 
 screen(office, ["Hello this is Joshua"])
 click.pause()
