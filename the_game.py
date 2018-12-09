@@ -1,6 +1,6 @@
 import click
 import time
-from utils import processing, check_twitter, office
+from utils import processing, check_twitter, office, screen, coffee_count
 
 title_text = """ 
               _____  ________  ___                
@@ -20,9 +20,7 @@ title_text = """
 
 """
 
-dirs = ["""
-        Directed by James Gilbert
-""",
+dirs = [
 """
             An SBRC production
 """,
@@ -36,7 +34,10 @@ dirs = ["""
 """,
 """
                      GROWTH.
+""",
 """
+        Directed by James Gilbert
+""",
 ]
 
 
@@ -84,10 +85,10 @@ answer = click.prompt("Are you prepared to accept everything that this entails?"
 
 while answer not in ["Yes", "yes", "y", "Y", "YES"]:
     click.clear()
-    answer = click.prompt("Are you prepared to accept everything that this entails?")
+    answer = click.prompt("Are you prepared to accept everything that this?")
 
-click.secho("Good, I am glad that you are willing to commit yourself to this task.")
-time.sleep(3)
+click.secho("Excellent")
+click.pause()
 click.clear()
 
 click.secho(office)
@@ -128,10 +129,29 @@ else:
     click.secho("Good job.")
 
 time.sleep(2)
-
-click.secho("Level one complete.", blink=True)
-click.pause()
 click.clear()
+
+response = None
+wt = 2.0
+while response not in ["A", "a"]:
+
+    screen(office, [
+        "An email marked 'high importance' has arrived in your inbox. What do you do?",
+        "A: Open the email",
+        "B: Check twitter",
+        "C: Get a coffee"
+    ], wait_time=wt)
+
+    response = click.prompt("Select an action")
+
+    if response in ["B", "b"]:
+        check_twitter(office)
+        click.pause()
+
+    elif response in ["C", "c"]:
+        coffee_count()
+
+    wt = 0.0
 
 click.secho(office)
 click.echo("You are now about to enter the ScrumPy metabolic simulation simulator...")
@@ -155,9 +175,11 @@ click.clear()
 click.echo(protein)
 time.sleep(2)
 click.clear()
-gene_name = click.prompt("What is the name of this gene?")
+gene_name = click.prompt("Name the gene")
 
-click.echo("")
+click.secho("Level one complete.", blink=True)
+click.pause()
+click.clear()
 
 import nicole
 import vanisha

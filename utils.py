@@ -3,6 +3,23 @@ import time
 from tqdm import tqdm
 import random
 
+COF_COUNT = 0
+COF_LIMIT = 10
+
+def coffee_count():
+    COF_COUNT += 1
+
+    if COF_COUNT > COF_LIMIT:
+        screen(bomb, [
+            "You drank too much coffee.",
+            "You have died."
+        ])
+        click.pause()
+        exit()
+
+    click.echo("Your coffee count is not at {}".format(COF_COUNT))
+    click.echo("This makes you work faster, but drinking too much coffee will end badly")
+
 
 def processing(text="Processing..."):
     click.secho(text, blink=True)
