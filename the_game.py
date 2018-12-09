@@ -1,6 +1,6 @@
 import click
 import time
-from utils import processing, check_twitter, office, screen, coffee_count
+from utils import processing, check_twitter, office, screen, coffee_counter
 
 title_text = """ 
               _____  ________  ___                
@@ -34,9 +34,6 @@ dirs = [
 """,
 """
                      GROWTH.
-""",
-"""
-        Directed by James Gilbert
 """,
 ]
 
@@ -87,7 +84,7 @@ while answer not in ["Yes", "yes", "y", "Y", "YES"]:
     click.clear()
     answer = click.prompt("Are you prepared to accept everything that this?")
 
-click.secho("Excellent")
+click.secho("Excellent. This constitutes your informed consent.")
 click.pause()
 click.clear()
 
@@ -118,11 +115,12 @@ click.clear()
 
 click.secho(office)
 autoethanogenum = click.prompt("How do you spell 'autoethanogenum'?")
-processing()
-
-click.clear()
-click.secho(office)
-
+processing("Checking spelling...")
+screen(office, [], 0)
+processing("Loading database...")
+screen(office, [], 0)
+processing("Performing string equivalence test...")
+screen(office, [], 0)
 if autoethanogenum != "autoethanogenum":
     click.secho("It might be a hard life {}".format(name))
 else:
@@ -149,12 +147,67 @@ while response not in ["A", "a"]:
         click.pause()
 
     elif response in ["C", "c"]:
-        coffee_count()
+        coffee_counter.add_count(office)
+
+    wt = 0.0
+
+click.clear()
+
+click.secho(office)
+click.echo("You see an email of high importance sent to your inbox")
+click.pause()
+processing("Loading email...")
+click.clear()
+processing("Setting fonts...")
+click.clear()
+processing("Adjusting text...")
+click.clear()
+click.secho("""
+Dear {},
+
+We really need you to get on with your important science.
+Today we have found an emergency in our bioreactor that requires a genome scale model to solve.
+The level of carbon monoxide in the system is too high and we're scared she's gonna blow.
+
+Unfortunately our last modeller died trying to save us. 
+She was working on a really important problem.
+
+What is the expected growth rate of C aceto when growing on glucose?
+
+Yours scincerely,
+Sean Sampson
+LanzarTak
+
+""".format(name))
+
+click.pause()
+
+response = None
+wt = 2.0
+while response not in ["A", "a"]:
+
+    screen(office, [
+        "Wow. Looks like you can't ignore this issue.",
+        "What do you do?",
+        "A: Enter scrumpy to find the solution",
+        "B: Check twitter",
+        "C: Get a coffee"
+    ], wait_time=wt)
+
+    response = click.prompt("Select an action")
+
+    if response in ["B", "b"]:
+        check_twitter(office)
+        click.pause()
+
+    elif response in ["C", "c"]:
+        coffee_counter.add_count(office)
 
     wt = 0.0
 
 click.secho(office)
 click.echo("You are now about to enter the ScrumPy metabolic simulation simulator...")
+click.secho("You thought things were nerdy before...", blink=True)
 click.pause()
 click.clear()
 
@@ -169,13 +222,28 @@ DKTCIEEVWEEFPAYTQYEVRAALAKCGLTTKHIESKVMVLSGGEQAKVRLCKLINNETNILILDEPTNHLDVDAKDELK
 RALKEYRGSILLVCHEPEFYKDVVTDVWNCEEWTTKIY
 """
 
-click.echo("In a moment you will be shown a protein sequence. That you have to identify.")
+click.echo("Its a good thing you're here")
 time.sleep(2)
+click.echo("In a moment you will be shown a protein sequence that you have to identify.")
+time.sleep(2)
+
 click.clear()
 click.echo(protein)
-time.sleep(2)
+time.sleep(3)
 click.clear()
 gene_name = click.prompt("Name the gene")
+
+screen(office)
+processing("Checking gene name...")
+screen(office)
+processing("Loading NCBI blast...")
+screen(office)
+processing("Querying server...")
+screen(office)
+processing("Validating response...")
+
+time.sleep(3)
+click.secho("Actually, Its probably not that important. Lets just move on.")
 
 click.secho("Level one complete.", blink=True)
 click.pause()

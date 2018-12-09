@@ -3,23 +3,6 @@ import time
 from tqdm import tqdm
 import random
 
-COF_COUNT = 0
-COF_LIMIT = 10
-
-def coffee_count():
-    COF_COUNT += 1
-
-    if COF_COUNT > COF_LIMIT:
-        screen(bomb, [
-            "You drank too much coffee.",
-            "You have died."
-        ])
-        click.pause()
-        exit()
-
-    click.echo("Your coffee count is not at {}".format(COF_COUNT))
-    click.echo("This makes you work faster, but drinking too much coffee will end badly")
-
 
 def processing(text="Processing..."):
     click.secho(text, blink=True)
@@ -52,11 +35,12 @@ def check_twitter(screen=None):
         click.echo(screen)
 
     tweets = [
-        """"
+        """
         @KanyeWest
         Mark Zuckerberg invest 1 billion dollars into Kanye West Ideas
         """,
-        """"
+
+        """
         @KanyeWest
         I hate when I'm on a flight and I wake up with a water bottle next to me like oh 
         great now I gotta be responsible for this water bottle
@@ -65,15 +49,28 @@ def check_twitter(screen=None):
         """
         @ ShaneWarne
         When I turned 36 I realised - the likelihood is that in four years time I'll be 40.
-        """
+        """,
 
         """
         @ Morty
         I wish that incest porn had a more mainstream audience. You know, for a friend.
+        """,
+
+        """
+        @DonaldTrump
+        Despite the negative press covfefe
+        """,
+
+        """
+        @ConnorMcGreggor
+        These custom-made suits aren’t cheap. This solid gold pocket watch, three people died making this watch.
+        I need to put people away.
+        I need those big fights. I’m going to end up in debt pretty fast.
         """
     ]
 
-    click.echo(random.choice(tweets))
+    choice = random.randint(0, len(tweets) -1)
+    click.echo(tweets[choice])
 
 
 def screen(background, text, wait_time=2.0):
@@ -115,3 +112,41 @@ bomb = """
           | ;  :|     
  _____.,-#%&$@%#&#~,._____
 """
+
+
+class CoffeCounter(object):
+
+    def __init__(self, limit=3):
+        self.count = 0
+        self.limit = limit
+
+    def add_count(self, disp_screen):
+        self.count += 1
+
+        if self.count > self.limit:
+            screen(bomb, [
+                "You drank too much coffee.",
+                "You have died.",
+                "Because you did not lived to pass on your knowledge, much of humanity perished in a nuclear holocaust"
+            ])
+            click.pause()
+            screen(bomb, [
+                "Thankfully, this was only a simulation",
+                "Just try to be more careful next time.",
+                "Please go back and try again",
+            ])
+            click.pause()
+
+            exit()
+
+
+
+        screen(disp_screen,
+            [
+            "You have had {} coffees today.".format(self.count),
+            "This makes you work faster, but remember drinking too much coffee will end badly"
+            ], 0
+        )
+        click.pause()
+
+coffee_counter = CoffeCounter()

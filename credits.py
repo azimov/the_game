@@ -3,6 +3,15 @@ import time
 
 SPEED = 0.4
 
+
+click.echo("""
+
+        Congratulations on making it to the end you have been awarded the rank of:
+                                
+                                DOCTOR
+
+""")
+
 click.echo(
     """
         GSM the game is an SBRC production.
