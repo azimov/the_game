@@ -321,7 +321,7 @@ while response not in ["A", "a"]:
 screen(office, ["You decide to send that email", "Looks like you've got a response right away"])
 click.pause()
 if blag:
-    screen(office, ["Dear {}".format(name), "You have saved the day! I love you!", "Best regards," "Sean"])
+    screen(office, ["Dear {}".format(name), "You have saved the day! I love you!", "Best regards,", "Sean"])
 else:
     screen(office, ["Dear {}".format(name), "It didn't work. A woman is dead because of you.", "Best regards," "Sean"])
 
@@ -337,10 +337,10 @@ DKTCIEEVWEEFPAYTQYEVRAALAKCGLTTKHIESKVMVLSGGEQAKVRLCKLINNETNILILDEPTNHLDVDAKDELK
 RALKEYRGSILLVCHEPEFYKDVVTDVWNCEEWTTKIY
 """
 
-screen(office ["You have to get back to your thesis work but the Gaschem team have distracted you",
-               "'Its a good thing you're here'",
-                "In a moment you will be shown a protein sequence that you have to identify."])
 click.clear()
+screen(office, ["You have to get back to your thesis work but the Gaschem team have distracted you",
+               "'Its a good thing you're here'",
+                "'In a moment you will be shown a protein sequence that we need you to identify.'"])
 click.echo(protein)
 time.sleep(3)
 click.clear()

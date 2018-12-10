@@ -8,7 +8,7 @@ if os.path.exists("baby.mp3"):
     mixer.music.load("baby.mp3")
     mixer.music.play()
 
-SPEED = 0.8
+SPEED = 0.5
 
 click.echo("""
 
@@ -29,7 +29,7 @@ for i in range(100):
 
 with open("credits.txt") as credits:
     for line in credits:
-        click.echo(line)
+        print(line + " ")
         time.sleep(SPEED)
 
 
