@@ -92,7 +92,7 @@ screen(office,
         "As it turns, it was none of these people.",
         "You left it on the tram when you went to Clifton",
         "Thomas calls you a bloody idiot",
-        "You manage to submit on time."
+        "Somehow, you manage to submit on time."
     ]
 )
 
