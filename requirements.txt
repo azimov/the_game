@@ -2,3 +2,4 @@ click
 tqdm
 gnuplotlib
 colorama
+pygame
