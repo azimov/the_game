@@ -8,7 +8,7 @@ if os.path.exists("baby.mp3"):
     mixer.music.load("baby.mp3")
     mixer.music.play()
 
-SPEED = 0.4
+SPEED = 0.8
 
 click.echo("""
 

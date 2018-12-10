@@ -172,7 +172,7 @@ The level of carbon monoxide in the system is too high and we're scared she's go
 Unfortunately our last modeller died trying to save us. 
 She was working on a really important problem.
 
-What is the expected growth rate of C aceto when growing on Fructose?
+What is the expected growth rate of C auto when growing on Fructose?
 
 Yours scincerely,
 Sean Sampson
@@ -238,12 +238,12 @@ while response not in ["A", "a"]:
     wt = 0.0
 
 click.clear()
-scrumpy_echo("load_model()")
+scrumpy_echo("m = ScrumPy.Model('MetaCLAU.spy')")
 
 response = None
 wt = 2.0
 while response not in ["A", "a"]:
-    bg = scrumpy_bg.format("load_model()")
+    bg = scrumpy_bg.format("m = ScrumPy.Model('MetaCLAU.spy')")
     screen(bg, [
         "You are in the  scrumpy simulator",
         "What do you do next?",
@@ -262,6 +262,9 @@ while response not in ["A", "a"]:
         coffee_counter.add_count(bg)
 
     wt = 0.0
+
+scrumpy_echo("lp = m.GetLP()")
+scrumpy_echo("lp.Solve()")
 
 click.echo("""
 >> Infeasible
@@ -307,30 +310,22 @@ while response not in ["A", "a"]:
             "Fixing this you get the answer"
             ]
         )
-        scrumpy_echo("m.Solve()")
+        scrumpy_echo("lp = m.GetLP()")
+        scrumpy_echo("lp.Solve()")
         click.echo("0.03")
         blag = False
+        response = "A"
 
     wt = 0.0
 
 screen(office, ["You decide to send that email", "Looks like you've got a response right away"])
-
+click.pause()
 if blag:
-    pass
+    screen(office, ["Dear {}".format(name), "You have saved the day! I love you!", "Best regards," "Sean"])
 else:
-    pass
+    screen(office, ["Dear {}".format(name), "It didn't work. A woman is dead because of you.", "Best regards," "Sean"])
 
-
-# Error in code
-
-# Fix bug, run again
-
-# Send email - response
-# "You saved the field of production of small quantities of solvents made from waste gasses in china"
-# "good job"
-
-# Kobashi mayru
-
+click.pause()
 
 protein = """
 MSILNVKNVNHGFGDRAIFEDVSFRLLKGEHVGLVGANGEGKSTFMSIITGKLMPDEGTIEWSNNVRVGYMDQHASLQKG
@@ -342,11 +337,9 @@ DKTCIEEVWEEFPAYTQYEVRAALAKCGLTTKHIESKVMVLSGGEQAKVRLCKLINNETNILILDEPTNHLDVDAKDELK
 RALKEYRGSILLVCHEPEFYKDVVTDVWNCEEWTTKIY
 """
 
-click.echo("Its a good thing you're here")
-time.sleep(2)
-click.echo("In a moment you will be shown a protein sequence that you have to identify.")
-time.sleep(2)
-
+screen(office ["You have to get back to your thesis work but the Gaschem team have distracted you",
+               "'Its a good thing you're here'",
+                "In a moment you will be shown a protein sequence that you have to identify."])
 click.clear()
 click.echo(protein)
 time.sleep(3)
