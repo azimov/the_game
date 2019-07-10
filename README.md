@@ -1,6 +1,6 @@
 # the_game
 
-A game for Rupert completing his PhD
+A game for Rupert completing his PhD... about his PhD...
 
 ## Hardware requirments
 
